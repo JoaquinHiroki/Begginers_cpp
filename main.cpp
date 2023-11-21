@@ -1,18 +1,35 @@
 #include <iostream>
-#include "Point.h"
-#include "Triangle.h"
+#include "Fraction.h"
 
 using namespace std;
 
-int main()
-{
-    Point a;
-    Point b{1};
-    Point c{-1, 7};
-    
-    Triangle t1 {a, b, c};
-    Triangle t2;
+int main () {
+    int num, den;
+    cin >> num;
+    cin >> den;
 
-    cout << "The perimeter is: " << t1.perimeter() << endl; 
-    cout << "The area is: " << t1.area() << endl;
+    Fraction one;
+    Fraction two(num ,den);
+    Fraction invalid(1, 0);
+
+
+    cout << one.calcRealValue() << endl;
+    cout << two.calcRealValue() << endl;
+    cout << invalid.calcRealValue() << endl;
+
+    cout << endl;
+
+    one.printFraction();
+    two.printFraction();
+    invalid.printFraction();
+
+    cout << endl;
+
+    one.sumFractions(two).printFraction();
+    two.sumFractions(one).printFraction();
+
+    
+
+    cout << one.sumFractions(two).calcRealValue() << endl;
+    cout << two.sumFractions(one).calcRealValue() << endl;
 }
