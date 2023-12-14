@@ -1,0 +1,12 @@
+Classes explanation:
+
+The main class is the CookiesVallartaSystem one, in its attributes there is the orders vector that stores the orders made by users, also the menu instance that represents the available items and the users vector that store information about registered users. In the methods we have the placeOrder that is to make a new order with spcified items, the viewMenu that displays the menu and the registerUser to register news user. 
+
+Now we jump to the Order class, the first attribute is the orderID to indentify the order, the next is user which refers to the persona that makes the order, items is the vector that contains the cookies in the order, and paymentMethod represents chosen payment method. Now, the methods getTotalAmount is to calculate the amount of the order, and addItem adds cookies to the order. 
+
+Then Menu class it has itesm that contains all available cookies in the menu.
+
+After we have the PaymentMethod class has methodtype that represent type of payment like credit card, and process payment us to process the payment of a given amount.
+
+
+Finally User class has userID to identify the user and the name as well, and the method of viewOrder that returns a vector of orders made by the user
